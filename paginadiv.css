@@ -1,0 +1,17 @@
+h1{
+    font-family: "Cambria";
+    font-size: 40px;
+    color: darkblue;
+    text-align: center;
+}
+
+.intro{
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    background-image: url("Deco/postit.jpg");
+    padding: 5px;
+    position: absolute;
+    
+}
