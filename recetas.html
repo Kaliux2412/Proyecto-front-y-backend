@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Mejores Recetas</title>
+</head>
+<script src="https://kit.fontawesome.com/822336ca20.js" crossorigin="anonymous"></script>
+<body class="modalrecetas">
+    <link href="paginadiv.css" rel="stylesheet">
+    <div class="modalre_contenedor">
+        <figure>
+            <img src="Deco/bienreceta.gif" class="modalre_img">
+        </figure>
+        <p class="tipo">Listo para aprender a cocinar??</p>
+        <table align="center">
+            <tr>
+                <th>
+                    <p class="tipo">!Haz click en la ruleta para aprender a hacer una de nuestras recetas!</p>
+                </th>
+                <th>
+                    <a title="Haz click para poner musica de fondo"><button onclick="reproducirmusica()" class="playmu" id="mudefondo"></button></a></div>
+                </th>
+            </tr>
+        </table>
+        <div class="barra"></div>
+        <div align="center"><img class="ruleta" src="Deco/ruleta.png" id="ruleta"></div>
+        <p id="premios"></p>
+        <p id="img"></p>
+        <table id="principal">
+            <tr><th><div id="ingredientes">
+                <p id="espe0"></p>
+                <li class="li" id="li1"></li>
+                <li class="li" id="li2"></li>
+                <li class="li" id="li3"></li>
+                <li class="li" id="li4"></li>
+                <li class="li" id="li5"></li>
+                <li class="li" id="li6"></li>
+                <li class="li" id="li7"></li>
+                <li class="li" id="li8"></li>
+                <li class="li" id="li9"></li>
+                <li class="li" id="li10"></li>
+                <li class="li" id="li11"></li>
+                <li class="li" id="li12"></li>
+                <li class="li" id="li13"></li>
+                <li class="li" id="li14"></li>
+                <li class="li" id="li15"></li>
+                <li class="li" id="li16"></li>
+                <li class="li" id="li17"></li>
+                <li class="li" id="li18"></li>
+                <li class="li" id="li19"></li>
+            </div></th><th> ->>> </th>
+            <th><div id="proceso">
+                <p class="pro" id="instru1"></p>
+                <p class="pro" id="instru2"></p>
+                <p class="pro" id="instru3"></p>
+                <p class="pro" id="instru4"></p>
+                <p class="pro" id="instru5"></p>
+                <p class="pro" id="instru6"></p>
+                <p class="pro" id="instru7"></p>
+                <p class="pro" id="instru8"></p>
+                <p class="pro" id="instru9"></p>
+                <p class="pro" id="instru10"></p>
+                <p class="pro" id="instru11"></p>
+            </div></th></tr>
+        </table>
+        <div align="center" id="tiempo"></div>
+        <div id="sonido">
+            <iframe src="audios/rulsonido.mp3" id="audio"></iframe>
+        </div>
+        <!-- Para hacer la parte del memorama -->
+        <b><p class="memorama">AQUI PODRAS JUGAR MEMORAMA MIENTRAS ESPERAS TU PLATILLO</p></b>
+        <div id="tablero">
+        </div>
+        <div class="jugar" onclick="generartablero()">Jugar</div>
+
+        <!-- Para hacer el menu final -->
+        <div class="menufi" id="menufi">
+            <button onclick="traerRecetarios()" class="recetarios" id="rece">RECETARIOS</button>
+            <button onclick="traerCanales()" class="canales" id="canales">CANALES<div id="infoca"></div></button>
+        </div>
+        <!-- <div id="mostrar">
+            <p id="intro"></p>
+        </div>  -->
+        <a href="iniciodiv.html" class="modalre_cerrar">Salir de Recetas</a>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script>
+        function reproducirmusica(){
+            const fondo = document.getElementById("mudefondo")
+            let musica = [
+            '<iframe src= "audios/The_Return.mp3" id="audios"></iframe>', 
+            '<iframe src= "audios/The-journey.mp3" id="audios"></iframe>', 
+            '<iframe src= "audios/extenz-Kalon.mp3" id="audios"></iframe>', 
+            '<iframe src= "audios/the-descent.mp3" id="audios"></iframe>', 
+            ]
+            function audio(){
+                fondo.innerHTML = `<div style = "display: none">${musica[0]} id="sonido"</div>`
+                setTimeout(()=>{fondo.innerHTML = `<div style = "display: none">${musica[1]} id="sonido2"</div>`; if(fondo.onclik){
+                    document.querySelector("#sonido").pause()
+                } },4000)
+                setTimeout(()=>{fondo.innerHTML = `<div style = "display: none">${musica[2]} id="sonido2"</div>`; if(fondo.onclik){
+                    document.querySelector("#sonido2").pause()}},4000)
+                setTimeout(()=>{fondo.innerHTML = `<div style = "display: none">${musica[3]} id="sonido2"</div>`; if(fondo.onclik){
+                    document.querySelector("#sonido3").pause()}},4000)
+            }
+            audio()
+        
+        }
+    </script>
+    <script src="opciones.js"></script>
+</body>
+</html>

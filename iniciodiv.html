@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Diversion Inteligente</title>
 </head>
-<body>
+<body class="general">
     <link href="paginadiv.css" rel="stylesheet">
-    <h1>-BIENVENIDO A...-</h1>
-    <div align="center"><img src="Deco/diversion inteligente.gif" style="position: absolute; right: 350px;"></div>
-    <div class="intro">
-        <h2>Para que es esta pagina?</h2>
-        <p>Esta pagina es para que puedas tener muchas ideas
-            de lo que puedes hacer para nunca aburrirte, para
-            que puedas disfrutar la vida al maximo!!
-        </p>
+    <div class="divgeneral">
+        <div class="bienve"><h1>BIENVENIDO A...</h1></div>
+        <h1 class="titulo" id="titulo">DIVERSION INTELIGENTE</h1>
+        <a href="#modali" title="Haz click para saber el proposito de la pagina"><button class="intro"></button></a>
+        <section id="modali">
+            <div class="contenedor">
+                <figure>
+                    <img class="modal_img" src="Deco/diversion.jpg">
+                </figure>
+                <p>En esta pagina podras obtener ideas que te ayudaran 
+                    a quitarte el aburrimiento y te podras divertir de muchas formas con 
+                    nuestras categorias diferentes: Musica, Recetas y Lugares!!</p>
+                <a href="#titulo" class="cerrar">GRACIAS!</a>
+            </div>
+        </section>
+
+        <div class="funcion">
+            <p>->Abajo encontraras diferentes menus, en cada uno hay 
+                ideas de cosas que te podrian llamar la atencion de acuerdo 
+                a su categoria, diviertete explorando!!!<-
+            </p>
+        </div>
+        <div id="iniciobtn">
+            <a href= musica.html title="Haz click para escuchar musica!!" class="musica">MUSICA</a>
+            <a href="recetas.html" title="Haz click para aprender a hacer recetas caseras" class="receta">RECETAS</a> 
+            <a href="lugares.html" title="Haz click para viajar por el mundo" class="lugares">LUGARES</a>
+        </div>
     </div>
+    <!-- <div style="text-align: center; width: 80%;"> -->
+        <!-- <img src="Deco/Juegos.gif" class="juegos"> -->
+        <!-- <img src="Deco/lugares.gif" class="lugares">
+    </div> -->
+
 </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica</title>
+</head>
+<body>
+    <link href="paginadiv.css" rel="stylesheet">
+    <section id="modalmusica" class="modalmusica">
+        <div class="modalmu_contenedor">
+            <figure>
+                <img src="Deco/intromu.gif" class="modalmu_img">
+            </figure>
+            <div class="wrap" id="wrap" style="text-align: center; justify-content: center; ">
+                <ul class="tabs">
+                    <li><a href="#tabla1" title="Haz clic para escuchar musica de ambiente" ><button  onclick="llenartabla('ambiente')" id="botonambi"class="botones__active" class="botones"  >AMBIENTE</button></a></li> 
+                    <li><a href="#tabla2" title="Haz clic para escuchar POP" ><button  onclick="llenartabla('pop')" id="botonpop" class="botones" class="botones__active">POP</button></a></li>
+                    <li><a href="#tabla3" title="Haz clic para escuchar las canciones mas populares" ><button onclick="llenartabla('famosas')" id="botonfam" class="botones" class="botones__active">FAMOSAS</button></a></li>
+                </ul>
+            </div>
+            <div align = "center" id="aparecer">
+                <script src="https://kit.fontawesome.com/822336ca20.js" crossorigin="anonymous"></script>
+                <table style="width: 60%;" id="tabla1">
+                <p> </p>
+                </table>
+                <!-- <table style="width: 60%;"  id="tabla2">
+                    <p> </p>
+                </table>
+                <table style="width: 60%;" id="tabla3">
+                    <p> </p>
+                </table> -->
+            </div> 
+            <script src="lectordemusica.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+            <script>
+                $(document).ready(function(){
+                    $('ul.tabs li a button:first').addClass('botones');
+                    $('#aparecer table').hide();
+                    $('ul.tabs li a button').click(function(){
+                        $('ul.tabs li a button').removeClass('botones__active');
+                        $(this).addClass('botones__active')
+                        $('#aparecer table').show();
+                        if($('ul.tabs li a button').hasClass("botones__active")){
+                            $("#aparecer table").show();
+                        }
+                        else{
+                            $('ul.tabs li a button').hasClass('botones')('#aparecer table').hide();
+            
+                        }
+                        
+                        // var activeTab = $(this).attr('href');
+                        // $(activeTab).show();
+                        // $(activeTab).removeClass('botones__active');
+                        // $(activeTab).hide()
+                        // return false
+                        }
+                    )
+                })
+            </script>
+            <a href="iniciodiv.html" class="modalmu_cerrar">Salir de Musica</a>
+        </div>
+    </section>
+</body>
+</html>
